@@ -27,3 +27,37 @@
   color: #282a36;
   transition: 0.3s linear;
 }
+
+.HeroContainer {
+  padding: 125px 60px;
+  text-align: left;
+  display: flex;
+  gap: 125px;
+}
+
+.HeroTitle {
+  font-size: 3em;
+  color: #282a36;
+  margin-bottom: 20px;
+}
+
+.HeroSubtitle {
+  font-size: 1.2em;
+  width: 600px;
+  color: #777;
+  margin-bottom: 40px;
+}
+.HeroButton {
+  background-color: #ff77a8;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #ff598d;
+    color: white;
+  }
+}
