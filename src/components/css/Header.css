@@ -10,6 +10,7 @@
 }
 .Logo {
   font-weight: 600;
+  font-size: 20px;
 }
 .nav {
   display: flex;
@@ -22,6 +23,7 @@
 
 .nav__link {
   font-weight: 600;
+  font-size: 20px;
   text-transform: capitalize;
   cursor: pointer;
   color: #282a36;
@@ -29,20 +31,20 @@
 }
 
 .HeroContainer {
-  padding: 125px 60px;
+  padding: 200px 60px;
   text-align: left;
   display: flex;
   gap: 125px;
 }
 
 .HeroTitle {
-  font-size: 3em;
+  font-size: 4em;
   color: #282a36;
   margin-bottom: 20px;
 }
 
 .HeroSubtitle {
-  font-size: 1.2em;
+  font-size: 1.3em;
   width: 600px;
   color: #777;
   margin-bottom: 40px;
@@ -59,5 +61,39 @@
   &:hover {
     background-color: #ff598d;
     color: white;
+  }
+}
+.HeroContact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+}
+.HeroIcons {
+  width: 45px;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 1.5s infinite ease-in-out;
+  font-size: 2em;
+  color: #333;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-10px); /* Подпрыгивание вверх */
   }
 }
