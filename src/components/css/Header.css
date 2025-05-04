@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   transition: 0.4s linear;
+  background-color: white !important;
   padding: 18px 0px;
   position: sticky;
   top: 0;
@@ -84,7 +85,7 @@
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 1.5s infinite ease-in-out;
-  font-size: 2em;
+  font-size: 1.7em;
   color: #333;
 }
 

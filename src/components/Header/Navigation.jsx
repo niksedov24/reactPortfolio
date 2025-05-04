@@ -11,7 +11,7 @@ export default function Navigation() {
               Home
             </a>
             <a className="nav__link" href="#about">
-              About
+              Services
             </a>
             <a className="nav__link" href="#portfolio">
               Portfolio
