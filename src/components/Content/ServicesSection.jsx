@@ -51,8 +51,12 @@ const ServicesSection = () => {
       description: "Создаю современные, адаптивные и удобные веб-сайты...",
       icon: "fas fa-code",
     },
-
-    // Больше услуг
+    {
+      id: "website-development",
+      title: "Website Development",
+      description: "Создаю современные, адаптивные и удобные веб-сайты...",
+      icon: "fas fa-code",
+    },
   ];
 
   const handleServiceClick = (serviceId) => {
@@ -68,6 +72,10 @@ const ServicesSection = () => {
   return (
     <section id="services" className="services-section">
       <h2>Services</h2>
+      <p>
+        “Получи уверенность в своем выборе. Мои услуги под гарантийным
+        контролем.”
+      </p>
 
       <div className="services-grid">
         {servicesData.map((service) => (
@@ -85,10 +93,8 @@ const ServicesSection = () => {
       {selectedService && (
         <div className="overlay" onClick={handleCloseDetails}>
           {" "}
-          {/* Добавили overlay */}
           <div className="service-details" onClick={(e) => e.stopPropagation()}>
             {" "}
-            {/*  Останавливаем распространение события */}
             <button onClick={handleCloseDetails}>X</button>
             <h3>{selectedService.title}</h3>
             <p>{selectedService.description}</p>
