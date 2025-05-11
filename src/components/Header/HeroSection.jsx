@@ -40,12 +40,13 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <img src="/src/assets/fupKYNKcanU.jpg" alt="" />
-      <div class="scroll-indicator">
-        <button>
-          Scroll Down <span style={{ color: "#FF77A8" }}>↓</span>{" "}
-        </button>
+      <div>
+        <img src="/src/assets/fupKYNKcanU.jpg" alt="" />
       </div>
+
+      <a className="scroll-indicator">
+        Scroll Down <span style={{ color: "#FF77A8" }}>↓</span>{" "}
+      </a>
     </section>
   );
 }

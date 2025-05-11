@@ -78,16 +78,24 @@
   flex-direction: row;
   gap: 15px;
 }
-
 .scroll-indicator {
-  position: absolute;
+  display: block;
+  width: 120px;
+  text-align: center;
+  font-weight: 500;
+  margin: 20px auto 0px;
+  animation: bounce 1.5s infinite ease-in-out;
+}
+
+/* .scroll-indicator {
+  position: relative;
   bottom: 100px;
   left: 50%;
   transform: translateX(-50%);
   animation: bounce 1.5s infinite ease-in-out;
   font-size: 1.7em;
   color: #333;
-}
+} */
 
 @keyframes bounce {
   0%,
