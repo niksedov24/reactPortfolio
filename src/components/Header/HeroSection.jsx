@@ -97,7 +97,7 @@ export default function HeroSection() {
       >
         <motion.img
           variants={Animation3}
-          src="/src/assets/fupKYNKcanU.jpg"
+          src="./public/fupKYNKcanU.jpg"
           alt=""
         />
       </motion.div>
