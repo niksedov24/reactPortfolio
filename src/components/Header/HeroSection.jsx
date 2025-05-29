@@ -71,19 +71,19 @@ export default function HeroSection() {
             className="icons"
           >
             <motion.a variants={Animation3} custom={1} href="#">
-              <img className="HeroIcons" src="../assets/vk.png" alt="" />
+              <img className="HeroIcons" src="src/assets/icons/vk.png" alt="" />
             </motion.a>
             <motion.a variants={Animation3} custom={2} href="#">
               <img
                 className="HeroIcons"
-                src="./src/assets/icons/Octicons-mark-github.svg.png"
+                src="src/assets/icons/Octicons-mark-github.svg.png"
                 alt=""
               />
             </motion.a>
             <motion.a variants={Animation3} custom={3} href="#">
               <img
                 className="HeroIcons"
-                src="./src/assets/icons/telegram-2048x2048.webp"
+                src="src/assets/icons/telegram-2048x2048.webp"
                 alt=""
               />
             </motion.a>
