@@ -1,4 +1,5 @@
 import "../css/Content.css";
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 
 export default function PortfolioSection() {
@@ -30,11 +31,78 @@ export default function PortfolioSection() {
       prevSlide === 0 ? projects.length - 1 : prevSlide - 1
     );
   };
-  return (
-    <section className="portfolio">
-      <h2>Portfolio</h2>
 
-      <div className="slider-container">
+  const Animation1 = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
+  const Animation2 = {
+    hidden: {
+      y: 100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
+  const Animation3 = {
+    hidden: {
+      x: 100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+  const Animation4 = {
+    hidden: {
+      y: -100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+  const Animation5 = {
+    hidden: {
+      x: -300,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
+  return (
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.5 }}
+      id="portfolio"
+      className="portfolio"
+    >
+      <motion.h2 custom={1} variants={Animation4}>
+        Portfolio
+      </motion.h2>
+
+      <motion.div custom={2} variants={Animation5} className="slider-container">
         <div
           className="slider"
           style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -51,11 +119,20 @@ export default function PortfolioSection() {
         <button className="slider-button next" onClick={nextSlide}>
           &gt;
         </button>
-      </div>
-      <div className="slide-description">
-        <h3>{projects[currentSlide].title}</h3>
-        <p>{projects[currentSlide].description}</p>
-      </div>
-    </section>
+      </motion.div>
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.5 }}
+        className="slide-description"
+      >
+        <motion.h3 custom={1} variants={Animation3}>
+          {projects[currentSlide].title}
+        </motion.h3>
+        <motion.p custom={2} variants={Animation3}>
+          {projects[currentSlide].description}
+        </motion.p>
+      </motion.div>
+    </motion.section>
   );
 }

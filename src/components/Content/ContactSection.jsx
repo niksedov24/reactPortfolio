@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import "../css/Content.css";
 
@@ -21,13 +22,76 @@ const Contact = () => {
     }, 3000);
   };
 
-  return (
-    <section id="contact" className="contact-section">
-      <h2>Contact</h2>
-      <p> Feel free to reach out to me!</p>
+  const Animation1 = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
 
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
+  const Animation2 = {
+    hidden: {
+      y: 100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
+  const Animation3 = {
+    hidden: {
+      x: 100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+  const Animation4 = {
+    hidden: {
+      y: -100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
+  return (
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.9 }}
+      id="contact"
+      className="contact-section"
+    >
+      <motion.h2 custom={1} variants={Animation4}>
+        Contact
+      </motion.h2>
+      <motion.p custom={2} variants={Animation4}>
+        {" "}
+        Feel free to reach out to me!
+      </motion.p>
+
+      <motion.form
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.9 }}
+        onSubmit={handleSubmit}
+      >
+        <motion.div custom={1} variants={Animation1} className="form-group">
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -37,9 +101,9 @@ const Contact = () => {
             required
             placeholder="Your Name"
           />
-        </div>
+        </motion.div>
 
-        <div className="form-group">
+        <motion.div custom={2} variants={Animation1} className="form-group">
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -49,9 +113,9 @@ const Contact = () => {
             required
             placeholder="Your Email"
           />
-        </div>
+        </motion.div>
 
-        <div className="form-group">
+        <motion.div custom={3} variants={Animation1} className="form-group">
           <label htmlFor="message">Message</label>
           <textarea
             id="message"
@@ -60,9 +124,11 @@ const Contact = () => {
             required
             placeholder="Your Message"
           />
-        </div>
+        </motion.div>
 
-        <button type="submit">Send Message</button>
+        <motion.button custom={3} variants={Animation4} type="submit">
+          Send Message
+        </motion.button>
 
         {status === "success" && (
           <p className="success-message">Message sent successfully!</p>
@@ -72,8 +138,8 @@ const Contact = () => {
             An error occurred. Please try again later.
           </p>
         )}
-      </form>
-    </section>
+      </motion.form>
+    </motion.section>
   );
 };
 

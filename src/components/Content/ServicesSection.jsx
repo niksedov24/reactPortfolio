@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import React, { useState } from "react";
 import "../css/Content.css";
 
@@ -69,26 +70,100 @@ const ServicesSection = () => {
     setSelectedService(null);
   };
 
+  const Animation1 = {
+    hidden: {
+      x: -100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
+  const Animation2 = {
+    hidden: {
+      y: 100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
+  const Animation3 = {
+    hidden: {
+      x: 100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      x: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+  const Animation4 = {
+    hidden: {
+      y: -100,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
+  const Animation5 = {
+    hidden: {
+      y: -50,
+      opacity: 0,
+    },
+    visible: (custom) => ({
+      y: 0,
+      opacity: 1,
+      transition: { delay: custom * 0.2 },
+    }),
+  };
+
   return (
-    <section id="services" className="services-section">
-      <h2>Services</h2>
-      <p>
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.5 }}
+      id="services"
+      className="services-section"
+    >
+      <motion.h2 custom={1} variants={Animation4}>
+        Services
+      </motion.h2>
+      <motion.p custom={2} variants={Animation4}>
         “Получи уверенность в своем выборе. Мои услуги под гарантийным
         контролем.”
-      </p>
+      </motion.p>
 
-      <div className="services-grid">
-        {servicesData.map((service) => (
-          <div
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ amount: 0.5 }}
+        className="services-grid"
+      >
+        {servicesData.map((service, index) => (
+          <motion.div
+            variants={Animation5}
+            custom={index + 0.1}
             key={service.id}
             className="service-item"
             onClick={() => handleServiceClick(service.id)}
           >
             <i className={service.icon}></i>
             <h3>{service.title}</h3>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       {selectedService && (
         <div className="overlay" onClick={handleCloseDetails}>
@@ -101,7 +176,7 @@ const ServicesSection = () => {
           </div>
         </div>
       )}
-    </section>
+    </motion.section>
   );
 };
 

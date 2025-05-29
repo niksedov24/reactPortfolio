@@ -7,10 +7,10 @@ export default function Navigation() {
       <div>
         <nav className="nav">
           <div className="nav__list">
-            <a className="nav__link" href="#contact">
+            <a className="nav__link" href="#home">
               Home
             </a>
-            <a className="nav__link" href="#about">
+            <a className="nav__link" href="#services">
               Services
             </a>
             <a className="nav__link" href="#portfolio">

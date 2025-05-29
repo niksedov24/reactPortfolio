@@ -9,6 +9,7 @@ export default function AppLayout() {
       {" "}
       <AppHeader />
       <AppContent />
+      <AppFooter />
     </div>
   );
 }
