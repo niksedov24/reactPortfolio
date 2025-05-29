@@ -71,11 +71,7 @@ export default function HeroSection() {
             className="icons"
           >
             <motion.a variants={Animation3} custom={1} href="#">
-              <img
-                className="HeroIcons"
-                src="./src/assets/icons/vk.png"
-                alt=""
-              />
+              <img className="HeroIcons" src="/public/icons/vk.png" alt="" />
             </motion.a>
             <motion.a variants={Animation3} custom={2} href="#">
               <img
@@ -101,7 +97,7 @@ export default function HeroSection() {
       >
         <motion.img
           variants={Animation3}
-          src="../../assets/fupKYNKcanU.jpg"
+          src="/src/assets/fupKYNKcanU.jpg"
           alt=""
         />
       </motion.div>
