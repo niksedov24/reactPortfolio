@@ -51,7 +51,7 @@ export default function HeroSection() {
           Hello! I am <span style={{ color: "#FF77A8" }}>Nikita</span>
         </motion.h1>
         <motion.p custom={1} variants={Animation1} className="HeroSubtitle">
-          I design and develop fast, reliable, and modern websites and
+          I Design and develop fast, reliable, and modern websites and
           applications, focusing on best practices and meticulous attention to
           detail for top-tier quality.
         </motion.p>
