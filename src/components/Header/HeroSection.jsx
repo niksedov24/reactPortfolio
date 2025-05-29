@@ -73,7 +73,7 @@ export default function HeroSection() {
             <motion.a variants={Animation3} custom={1} href="#">
               <img
                 className="HeroIcons"
-                src="src/assets/icons/Octicons-mark-github.svg.png"
+                src="./src/assets/icons/vk.png"
                 alt=""
               />
             </motion.a>
