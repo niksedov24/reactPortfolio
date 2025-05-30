@@ -1,4 +1,5 @@
 import { delay, motion } from "framer-motion";
+import logoimg from "/public/fupKYNKcanU.jpg";
 
 export default function HeroSection() {
   const Animation1 = {
@@ -95,11 +96,7 @@ export default function HeroSection() {
         whileInView="visible"
         viewport={{ amount: 0.7 }}
       >
-        <motion.img
-          variants={Animation3}
-          src="/public/fupKYNKcanU.jpg"
-          alt=""
-        />
+        <motion.img variants={Animation3} src={logoimg} alt="" />
       </motion.div>
 
       {/* <a className="scroll-indicator">
