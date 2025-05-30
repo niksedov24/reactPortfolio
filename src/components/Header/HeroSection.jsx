@@ -1,5 +1,8 @@
 import { delay, motion } from "framer-motion";
 import logoimg from "/public/fupKYNKcanU.jpg";
+import vkimg from "/public/icons/vk.png";
+import gitimg from "/public/icons/Octicons-mark-github.svg";
+import tgimg from "/public/icons/telegram-2048x2048";
 
 export default function HeroSection() {
   const Animation1 = {
@@ -72,21 +75,13 @@ export default function HeroSection() {
             className="icons"
           >
             <motion.a variants={Animation3} custom={1} href="#">
-              <img className="HeroIcons" src="/public/icons/vk.png" alt="" />
+              <img className="HeroIcons" src={vkimg} alt="" />
             </motion.a>
             <motion.a variants={Animation3} custom={2} href="#">
-              <img
-                className="HeroIcons"
-                src="/public/icons/Octicons-mark-github.svg.png"
-                alt=""
-              />
+              <img className="HeroIcons" src={gitimg} alt="" />
             </motion.a>
             <motion.a variants={Animation3} custom={3} href="#">
-              <img
-                className="HeroIcons"
-                src="/public/icons/telegram-2048x2048.webp"
-                alt=""
-              />
+              <img className="HeroIcons" src={tgimg} alt="" />
             </motion.a>
           </motion.div>
         </div>
