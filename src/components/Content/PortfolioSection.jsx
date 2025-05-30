@@ -110,7 +110,7 @@ export default function PortfolioSection() {
         >
           {projects.map((project) => (
             <div key={project.id} className="slide">
-              <img src={project.imageUrl} alt={project.title} />
+              <img src={portfolioimg} alt={project.title} />
             </div>
           ))}
         </div>
