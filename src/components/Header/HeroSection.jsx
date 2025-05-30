@@ -2,7 +2,7 @@ import { delay, motion } from "framer-motion";
 import logoimg from "/public/fupKYNKcanU.jpg";
 import vkimg from "/public/icons/vk.png";
 import gitimg from "/public/icons/Octicons-mark-github.svg";
-import tgimg from "/public/icons/telegram-2048x2048";
+import tgimg from "/public/icons/telegram-2048x2048.webp";
 
 export default function HeroSection() {
   const Animation1 = {
