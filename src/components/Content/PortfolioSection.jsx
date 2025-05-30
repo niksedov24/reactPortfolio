@@ -8,14 +8,14 @@ export default function PortfolioSection() {
     {
       id: 1,
       title: "Project 1",
-      imageUrl: "/src/assets/portfolio/9739961.jpg",
+      imageUrl: "/public/portfolio/9739961.jpg",
       description: "Short description of project 1.",
       fullDescription: "Detailed description of Project 1...",
     },
     {
       id: 2,
       title: "Project 2",
-      imageUrl: "/src/assets/portfolio/9739961.jpg",
+      imageUrl: "/public/portfolio/9739961.jpg",
       description: "Short description of project 2.",
       fullDescription: "Detailed description of Project 2...",
     },
