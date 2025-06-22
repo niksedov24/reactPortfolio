@@ -87,16 +87,6 @@
   animation: bounce 1.5s infinite ease-in-out;
 }
 
-/* .scroll-indicator {
-  position: relative;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: bounce 1.5s infinite ease-in-out;
-  font-size: 1.7em;
-  color: #333;
-} */
-
 @keyframes bounce {
   0%,
   100% {

@@ -141,8 +141,8 @@ const ServicesSection = () => {
         Services
       </motion.h2>
       <motion.p custom={2} variants={Animation4}>
-        “Получи уверенность в своем выборе. Мои услуги под гарантийным
-        контролем.”
+        “Gain confidence in your choice. My services are under warranty
+        control.”
       </motion.p>
 
       <motion.div

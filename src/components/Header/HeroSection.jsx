@@ -63,7 +63,7 @@ export default function HeroSection() {
           <motion.a
             variants={Animation2}
             custom={2}
-            href="#portfolio"
+            href="#contact"
             className="HeroButton"
           >
             Contact Me →
@@ -93,10 +93,6 @@ export default function HeroSection() {
       >
         <motion.img variants={Animation3} src={logoimg} alt="" />
       </motion.div>
-
-      {/* <a className="scroll-indicator">
-        Scroll Down <span style={{ color: "#FF77A8" }}>↓</span>{" "}
-      </a> */}
     </motion.section>
   );
 }
